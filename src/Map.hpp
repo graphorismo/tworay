@@ -11,7 +11,7 @@ class Map : public IMap
 private:
     int width;
     int height;
-    float rotation;
+    std::shared_ptr<std::vector<int>> data;
 public:
 
     Map

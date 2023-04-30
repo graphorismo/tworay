@@ -6,18 +6,18 @@
 class Player : public IPlayer
 {
 private:
-    float x;
-    float y; 
-    float r;
+    float positionX;
+    float positionY; 
+    float rotation;
 public:
 
-    Player(float x, float y, float r);
+    Player(float positionX, float positionY, float rotation);
 
     ~Player();
 
-    virtual void setPositionX(float x) override;
-    virtual void setPositionY(float y) override;
-    virtual void setRotation(float r) override;
+    virtual void setPositionX(float positionX) override;
+    virtual void setPositionY(float positionY) override;
+    virtual void setRotation(float rotation) override;
 
     virtual float getPositionX() override;
     virtual float getPositionY() override;

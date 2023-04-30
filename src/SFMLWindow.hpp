@@ -11,12 +11,13 @@ private:
     sf::RenderWindow renderWindow;
 public:
 
-    SFMLWindow();
+    SFMLWindow(int width, int height);
 
     ~SFMLWindow();
 
     virtual int getWidth() override;
     virtual int getHeight() override;
+    
     virtual bool checkIfOpen() override;
 };
 

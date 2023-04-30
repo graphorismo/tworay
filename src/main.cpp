@@ -29,7 +29,7 @@ int main()
     std::shared_ptr<IMap>       map     ( new Map(5,5,mapData) );
     std::shared_ptr<IPlayer>    player  ( new Player(5.0, 5.0, 0.5) );
     std::shared_ptr<IWorld>     world   ( new World(map, player) );
-    std::shared_ptr<IWindow>    window  ( new SFMLWindow() );
+    std::shared_ptr<IWindow>    window  ( new SFMLWindow(800, 600) );
     std::shared_ptr<IGame>      game    ( new Game(window, world) );
     while (game->getWindow()->checkIfOpen())
     {

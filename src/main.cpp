@@ -31,9 +31,6 @@ int main()
     std::shared_ptr<IWorld>     world   ( new World(map, player) );
     std::shared_ptr<IWindow>    window  ( new SFMLWindow(800, 600) );
     std::shared_ptr<IGame>      game    ( new Game(window, world) );
-    while (game->getWindow()->checkIfOpen())
-    {
-        game->processSingleTick();
-    }
+    game->start();
     return 0;
 }

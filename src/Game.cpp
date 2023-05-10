@@ -24,7 +24,14 @@ std::shared_ptr<IWorld> Game::getWorld()
     return world;
 }
 
-void Game::processSingleTick()
+void Game::start()
 {
-    //TODO
+    while( ! world->checkIfDead()){
+        std::shared_ptr<std::vector<std::shared_ptr<IEvent>>> events = window->getEvents();
+        for (std::shared_ptr<IEvent> event : *events)
+        {
+            event->affectWorld(world);
+        }
+        window->drawWorld(world);
+    }
 }

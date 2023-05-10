@@ -1,6 +1,8 @@
 #if !defined(GAME)
 #define GAME
 
+#include <SFML/Graphics.hpp>
+
 #include "IGame.hpp"
 
 class Game : public IGame
@@ -18,7 +20,7 @@ public:
 
     virtual std::shared_ptr<IWindow> getWindow() override;
     virtual std::shared_ptr<IWorld> getWorld() override;
-    virtual void processSingleTick() override;
+    virtual void start() override;
 };
 
 

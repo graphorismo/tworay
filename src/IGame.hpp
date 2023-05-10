@@ -11,7 +11,7 @@ class IGame
 public:
     virtual std::shared_ptr<IWindow> getWindow() = 0;
     virtual std::shared_ptr<IWorld> getWorld() = 0;
-    virtual void processSingleTick() = 0;
+    virtual void start() = 0;
 };
 
 
